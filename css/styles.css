@@ -73,6 +73,9 @@ audio {
     top: 0;
     left: 0;
 }
+audio::-webkit-media-controls-panel {
+  background-color: coral;
+}
 h1, h2, h3, h4, h5, h6{
     display: block;
     padding: 0 2rem;
