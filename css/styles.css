@@ -1,0 +1,305 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,700&display=swap');
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end reset */
+
+html{
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: rgb(236,183,117);
+    background: linear-gradient(0deg, rgba(236,183,117,1) 0%, rgba(246,232,170,1) 25%, rgba(227,191,166,1) 50%, rgba(184,224,229,1) 75%, rgba(143,207,216,1) 100%);
+    font-family:'Roboto Flex','Arial',sans-serif;
+    font-style: normal;
+}
+*{
+    color:#004368;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+body {
+    font-size: 1em;
+    line-height: 1;
+}
+header{
+    padding: 5% 10%;
+}
+audio {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    display: block;
+    padding: 0 2rem;
+}
+h1{
+    font-size: 7.6rem;
+    line-height: 8rem;
+    font-weight: 700;
+    letter-spacing: -1.5pt;
+}
+h2{
+    font-size: 5.4rem;
+    font-weight: 400;
+    line-height: 6rem;
+}
+h3{
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 4.6rem;
+}
+h4{
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 4rem;
+}
+section {
+    margin: 2rem 0;
+}
+    article.flex {
+        padding: 4rem 0rem;
+    }
+        .flex .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: #004368;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+        
+        .flex-container span {
+            background-color: #ebd1a7;
+            margin:0.5rem;
+            text-align: center;
+            line-height: 3.2rem;
+            font-size: 2rem;
+            padding: 1.2rem;
+        }
+
+article.grid {text-align: center;width: 100%;}      
+    .grid .wrapper {
+        display: inline-grid;
+        grid-gap: 10px;
+        grid-template-columns: 20rem 15rem 16rem;
+        background-color: #badfe3;
+        text-align: left;
+        padding: 2rem;
+    }
+    .grid .wrapper .box {
+        background-color: #004368;
+        color: #fff;
+        border-radius: 5px;
+        padding: 2rem;
+        font-size: 2rem;}
+    .grid .wrapper .box.a {
+        grid-column: 1 / span 2;
+    }
+    .grid .wrapper .box.b {
+        grid-column: 3 ;
+        grid-row: 1 / span 2;
+    }
+    .grid .wrapper .box.c {
+        grid-column: 1 ;
+        grid-row: 2 ;
+    }
+    .grid .wrapper .box.d {
+        grid-column: 2 ;
+        grid-row: 2 ;
+    }
+
+
+article.position .parent {
+    background: firebrick;
+    padding: 4rem;
+    position: relative;
+    }
+    article.position .parent h4{
+        color:bisque;
+    }
+    article.position .parent .children {
+        width: 33.3%;
+        background: #004368;
+        display: inline-block;
+        padding: 3rem;
+        margin: 0.2rem;
+    }
+    article.position .parent .children:first-of-type{
+        position:relative;
+        top:1rem;
+        background: #156800;
+        left: 2rem;
+    }
+    article.position .parent .children:nth-of-type(2){
+        position:absolute;
+        top: 10rem;
+        z-index: 1;
+        right: 8rem;
+        background: #bf169a;
+    }
+    article.position .parent .children:nth-of-type(3){
+        position:static;
+     
+        top:1rem;
+    }
+    
+
+article.transform {
+    display: flex;
+    justify-content: center;
+}
+.transform div {
+        width: 12rem;
+        height: 16rem;
+        background: firebrick;
+        margin: 1.2rem;
+        display: inline-block;
+}
+    .transform div.skew{
+        animation: skew 3s infinite;
+        transform: skew(20deg);
+        animation-direction: alternate;
+    }
+    .rotate{  
+        animation: roll 3s infinite;
+        transform: rotate(30deg);
+    }
+    .translate {
+        animation: transla 3s infinite;
+        animation-direction: alternate;
+    }
+
+@keyframes skew {
+    0% {
+      transform: skew(20deg, 20deg);
+    }
+    100% {
+      transform: skew(-20deg, -20deg);
+    }
+  }
+  @keyframes roll {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes transla {
+    0% {
+      transform: translate(0, 0);    
+    }
+    100% {
+      transform: translate(20px, 50px);
+    }
+  }
+.transition{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.transition button {
+    padding: 1.2rem 3.2rem;
+    background-color: coral;
+    border: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+.transition button:hover{
+    opacity: 0.6;
+}
+
+.animation{
+    position: relative;
+    min-height: 40rem;
+}
+    .animation div{
+        display:block;
+        position:absolute;
+        height:10%;
+        width:10%;
+        background-color:#11862f;
+        top:50%;
+        left:50%;
+        animation: 
+        jump 1s infinite alternate, 
+        rotate 5s infinite linear;
+    }
+        .animation div.dos{
+            background:#ff9900;
+            animation:
+                jump 1s infinite alternate,
+                rotate 3s linear infinite;
+            }
+        
+        @keyframes jump {
+            0% {
+            top:50%;
+            }
+            100% {
+            top:20%;
+            background:#ffffff;
+            }
+        }
+        @keyframes rotate {
+            100% {
+            transform:rotate(360deg);
+            }
+        }
+    
+
+
+
+@media (max-width: 600px) {
+    .flex .flex-container {
+        flex-flow: column;
+    }
+    article.position .parent .children {
+        width: 50%;
+
+    }
+}
