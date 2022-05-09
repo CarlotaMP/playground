@@ -56,6 +56,9 @@ html{
     font-family:'Roboto Flex','Arial',sans-serif;
     font-style: normal;
 }
+audio::-webkit-media-controls-panel {
+  background-color: coral;
+}
 *{
     color:#004368;
     font-size: 1.6rem;
