@@ -155,6 +155,31 @@ article.grid {text-align: center;width: 100%;}
         grid-row: 2 ;
     }
 
+    .grid .wrapper.area{
+        display: grid;
+        height: 30rem;
+        max-width: 80vw;
+        margin: 2rem auto;
+        grid-template-rows: 20% auto;
+        grid-template-columns: auto;
+        grid-template-areas: 'boxa boxa boxa'
+                            'boxb boxb boxc'
+                            'boxd boxd boxc' 
+                            'boxd boxd boxc';
+
+    }
+    .grid .wrapper.area .box.a{
+        grid-area: boxa;
+    }
+    .grid .wrapper.area .box.b{
+        grid-area: boxb;
+    }
+    .grid .wrapper.area .box.c{
+        grid-area: boxc;
+    }
+    .grid .wrapper.area .box.d{
+        grid-area: boxd;
+    }
 
 article.position .parent {
     background: firebrick;
