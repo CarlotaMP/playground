@@ -161,7 +161,7 @@ article.grid {text-align: center;width: 100%;}
         max-width: 80vw;
         margin: 2rem auto;
         grid-template-rows: 20% auto;
-        grid-template-columns: auto;
+        grid-template-columns: repeat(3,1fr);
         grid-template-areas: 'boxa boxa boxa'
                             'boxb boxb boxc'
                             'boxd boxd boxc' 
