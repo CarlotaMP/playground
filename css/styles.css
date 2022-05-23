@@ -267,7 +267,7 @@ article.transform {
   }
 .transition{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin: 2rem 0;
 }
 .transition button {
@@ -275,10 +275,16 @@ article.transform {
     background-color: coral;
     border: none;
     border-radius: 0.5rem;
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 .transition button:hover{
     opacity: 0.6;
+}
+.transition button:nth-of-type(2){
+    transition: none;
+}
+.transition button:nth-of-type(2):hover{
+    transition:all 0.5s;
 }
 
 .animation{
